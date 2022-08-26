@@ -9,7 +9,6 @@ import javafx.beans.property.SimpleStringProperty;
 
 public class Reservation {
 	
-	private int id;
 	private SimpleObjectProperty date;
 	private SimpleStringProperty time;
 	private SimpleStringProperty name;
@@ -17,20 +16,11 @@ public class Reservation {
 	private SimpleStringProperty children;
 	
 	public Reservation(LocalDate date, String time, String name, String adults, String children) {
-		this.id = 0;
 		this.date = new SimpleObjectProperty(date);
 		this.time = new SimpleStringProperty(time);
 		this.name = new SimpleStringProperty(name);
 		this.adults = new SimpleStringProperty(adults);
 		this.children = new SimpleStringProperty(children);
-	}
-
-	public void setId() {
-		id++;
-	}
-	
-	public int getId() {
-		return this.id;
 	}
 	
 	public ObjectProperty<LocalDate> dateProperty() {
